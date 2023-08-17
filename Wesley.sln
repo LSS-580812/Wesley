@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WesleyBaseEx", "WesleyBaseEx\WesleyBaseEx.csproj", "{1F7B4E17-4AFD-4CC0-B796-459AA7E6BDD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F7B4E17-4AFD-4CC0-B796-459AA7E6BDD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F7B4E17-4AFD-4CC0-B796-459AA7E6BDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F7B4E17-4AFD-4CC0-B796-459AA7E6BDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F7B4E17-4AFD-4CC0-B796-459AA7E6BDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4E89050-DFA6-4DEB-901D-136CC1D8892C}
+	EndGlobalSection
+EndGlobal

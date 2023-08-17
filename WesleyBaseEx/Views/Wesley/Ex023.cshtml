@@ -1,0 +1,50 @@
+﻿@model WesleyBaseEx.Models.MessageModel_Cs
+
+@using(Html.BeginForm()){
+    @Html.AntiForgeryToken()
+        //來防止CSRF(Cross-Site Request Forgery)攻擊，在Controller中必須宣告[ValidateAntiForgeryToken]
+    @Html.ValidationSummary(true);
+    <p>
+        @Html.LabelFor(model=> model.Title_P) <!--<label for="z_">&#x6A19;&#x984C;</label>-->
+        @Html.TextBoxFor(Model=> Model.Title_P)
+        @Html.ValidationMessageFor(Model=> Model.Title_P) <!--當驗證失敗時，所顯示的文字對話框-->
+        @*
+            <span class="field-validation-valid" data-valmsg-for="Title_P" data-valmsg-replace="true"></span>
+        *@
+    </p>
+    <p>
+        @Html.LabelFor(Model=> Model.Content_P)
+        @Html.TextBoxFor(Model=> Model.Content_P)
+        @Html.ValidationMessageFor(Model=> Model.Content_P)
+        @*
+            <span class="field-validation-valid" data-valmsg-for="Content_P" data-valmsg-replace="true"></span>
+        *@
+        <!--
+        <label class="text-primary">Male</label>
+        <input type="text" name="Name" id="Name">
+        -->
+    </p>
+    <p>
+        <!--ASP.NET Core MVC Validation Message Tag Helper 驗證訊息標籤協助程式
+            https://www.youtube.com/watch?v=4nIqriW_sto&ab_channel=%E8%A1%9B%E6%96%AF%E7%90%86%E9%A0%BB%E9%81%93%28wesley09171%29
+        -->
+        <div class="form-group">
+            <label asp-for="Email_P"></label>
+            <input asp-for="Email_P">
+            <span asp-validation-for="Email_P" class="text-danger"></span>
+        </div>
+    </p>
+    <p>
+        <input type="submit" value="送出">
+    </p>
+    @Html.ActionLink("回主頁面","Index", "Home")
+    <a href="@Url.Action("Index", "Home")">回主頁面</a>
+    @Html.ActionLink("傳址頁面", "index", "Home", 
+        "https","www.google.com","a", //這是註解
+        new{id=10, name="apple", @class="fruit", sex="man"},
+        new{style="field-validation-valid", @class="MyStyle"}
+        )
+        @*
+            <a class="MyStyle" href="https://www.google.com/Home/index/10?name=apple&amp;class=fruit&amp;sex=man#a" style="field-validation-valid">&#x50B3;&#x5740;&#x9801;&#x9762;</a>
+        *@
+}
